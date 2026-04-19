@@ -1,0 +1,92 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.master.cs" Inherits="Corporate.Home" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="Styles/Site.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="page">
+            
+            <table class="auto-style1">
+                <tr>
+                    <td class="auto-style2">
+                        <table class="auto-style1">
+                            <tr>
+                                <td>Welcome</td>
+                                <td>LogOut</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table class="auto-style1">
+                            <tr>
+                                <td class="auto-style1">
+                                    <asp:Image ID="Image1" runat="server" Height="200px" ImageUrl="~/Styles/Gemini_Generated_Image_tzwa9vtzwa9vtzwa.png" Width="1040px" />
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table class="auto-style1">
+                            <tr>
+                                <td>
+                                    <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" CssClass="menu">
+                                        <Items>
+                                            <asp:MenuItem NavigateUrl="~/Home.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                                            <asp:MenuItem Text="|" Value="|"></asp:MenuItem>
+                                            <asp:MenuItem Text="Master Entry" Value="Master Entry">
+                                                <asp:MenuItem NavigateUrl="~/DeptMaster.aspx" Text="Departments" Value="Departments"></asp:MenuItem>
+                                                <asp:MenuItem NavigateUrl="~/roleMaster.aspx" Text="Roles" Value="Roles"></asp:MenuItem>
+                                                <asp:MenuItem Text="Employees" Value="Employees" NavigateUrl="~/employeeMaster.aspx"></asp:MenuItem>
+                                            </asp:MenuItem>
+                                            <asp:MenuItem Text="|" Value="|"></asp:MenuItem>
+                                            <asp:MenuItem Text="Search Data" Value="View Data">
+                                                <asp:MenuItem NavigateUrl="~/searchEmpId.aspx" Text="Search By Employee Id" Value="Search By Employee Id"></asp:MenuItem>
+                                                <asp:MenuItem NavigateUrl="~/searchDept.aspx" Text="Search By Department " Value="Search By Department "></asp:MenuItem>
+                                                <asp:MenuItem NavigateUrl="~/searchRole.aspx" Text="Search By Role" Value="Search By Role"></asp:MenuItem>
+                                            </asp:MenuItem>
+                                            <asp:MenuItem Text="|" Value="|"></asp:MenuItem>
+                                        </Items>
+                                    </asp:Menu>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table class="auto-style1">
+                            <tr>
+                                <td>
+                                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                    </asp:ContentPlaceHolder>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table class="auto-style1">
+                            <tr>
+                                <td>Footer</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            
+        </div>
+    </form>
+</body>
+</html>
